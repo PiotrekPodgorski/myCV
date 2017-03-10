@@ -1,0 +1,51 @@
+$defined-bs-type: border-box !default;
+@mixin bs($bs-type: $defined-bs-type) {
+  -webkit-box-sizing: $bs-type;
+  -moz-box-sizing: $bs-type;
+  box-sizing: $bs-type;
+}
+
+@mixin push--auto {
+	margin: {
+		left: auto;
+		right: auto;
+	}
+
+	padding: {
+		left: 0;
+		right: 0;
+	}
+}
+
+$defined-radius: 0rem;
+@mixin border-radius($radius: $defined-radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;
+}
+
+@mixin linear-gradient($variables) {
+  background: -webkit-linear-gradient($variables); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient($variables); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient($variables); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to $variables); /* Standard syntax */
+  }
+
+@mixin radial-gradient($variables) {
+  background: -webkit-radial-gradient($variables); /* Safari */
+  background: -o-radial-gradient($variables); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient($variables); /* Firefox 3.6 to 15 */
+  background: radial-gradient($variables); /* Standard syntax */
+}
+
+@mixin repeat-radial-gradient($variables) {
+  /* For Safari 5.1 to 6.0 */
+  background: -webkit-repeating-radial-gradient($variables);
+  /* For Opera 11.6 to 12.0 */
+  background: -o-repeating-radial-gradient($variables);
+  /* For Firefox 3.6 to 15 */
+  background: -moz-repeating-radial-gradient($variables);
+  /* Standard syntax */
+  background: repeating-radial-gradient($variables);
+}
