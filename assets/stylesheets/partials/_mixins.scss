@@ -16,7 +16,34 @@ $defined-bs-type: border-box !default;
 		right: 0;
 	}
 }
-
+@mixin fontRaleway($weight: 400, $size: inherit) {
+  font-family: 'Raleway', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+@mixin fontRoboto($weight: 400, $size: inherit) {
+  font-family: 'Roboto', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+@mixin fontMontserrat($weight: 400, $size: inherit) {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: $weight;
+  font-size: $size;
+}
+@mixin fontRighteous($size: inherit) {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: $size;
+}
+@mixin padVert($top: inherit, $bottom: inherit) {
+  padding-top: $top;
+  padding-bottom: $bottom;
+}
+@mixin padHor($right: inherit, $left: inherit) {
+  padding-right: $right;
+  padding-left: $left;
+}
 $defined-radius: 0rem;
 @mixin border-radius($radius: $defined-radius) {
 	-webkit-border-radius: $radius;
