@@ -133,7 +133,8 @@ h2 {
   p {
     display: inline-block;;
   }
-}.aboutMe {
+}
+.aboutMe {
   @include padVert($navTopHeight, $navTopHeight);
   &__Left {
     @include fontMontserrat(700,1.4rem);
@@ -144,6 +145,9 @@ h2 {
   }
   li {
     list-style: none;
+    a {
+      font-size: 1.2rem;
+    }
   }
   &__name {
     font-size: 2rem;
