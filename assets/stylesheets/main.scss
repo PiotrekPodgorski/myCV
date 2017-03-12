@@ -85,6 +85,28 @@ h2 {
   @include fontRighteous(1.4rem);
   text-decoration: none;
   @include padVert(1rem, 1rem);
+  &__EN {
+    color: $color3;
+    &:hover {
+      color: $color3A;
+      text-decoration: none;
+    }
+  }
+  &__PL {
+    color: $color4;
+    &:hover {
+      color: $color4;
+      text-decoration: none;
+    }
+  }
+  p {
+    display: inline-block;;
+  }
+}
+.langEnPl {
+  @include fontRighteous(1.4rem);
+  text-decoration: none;
+  @include padVert(1rem, 1rem);
   &__PL {
     color: $color3;
     &:hover {
