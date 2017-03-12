@@ -85,14 +85,14 @@ h2 {
   @include fontRighteous(1.4rem);
   text-decoration: none;
   @include padVert(1rem, 1rem);
-  &__EN {
+  &__PL {
     color: $color3;
     &:hover {
       color: $color3A;
       text-decoration: none;
     }
   }
-  &__PL {
+  &__EN {
     color: $color4;
     &:hover {
       color: $color4;
