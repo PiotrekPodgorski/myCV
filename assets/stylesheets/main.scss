@@ -1,8 +1,6 @@
 @import "bootstrap";
 @import "partials/mixins";
 @import "partials/variables";
-// @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700|Raleway:400,700|Roboto:400,700');
-// @import url('https://fonts.googleapis.com/css?family=Righteous');
 
 html {@include bs;}
 *, *:before, *:after {@include bs(inherit);}
@@ -31,6 +29,18 @@ body {
     a {
       color: $color3;
       text-decoration: none;
+    }
+  }
+}
+.aboutHead {
+  span {
+    float: right;
+    a{
+      color: $color3;
+      text-align: right;
+      .fa {
+        @include padHor(0.2rem, 0.2rem);
+      }
     }
   }
 }
