@@ -1,0 +1,179 @@
+@import "partials/mixins";
+@import "partials/variables";
+
+html {@include bs;}
+*, *:before, *:after {@include bs(inherit);}
+// html {font-size: 62.5%;}
+
+@page {
+  size: 21cm 29.7cm portrait;
+  margin: 1.5cm;
+  @include fontCalibri;
+  background-color: $color7p;
+  @bottom-left {
+    content: "Piotrek Podgorski - CV";
+    // @include fontCalibri(400,9pt,$color6p);
+  }
+  @bottom-right {
+    content: counter(page) " / " counter(pages);
+    // @include fontCalibri(400,9pt,$color6p);
+  }
+}
+
+h1 {
+  @include fontCalibri(700,22pt,$color2);
+  padding-bottom: 0.21cm;
+  margin: 0;
+}
+h2 {
+  @include fontCalibri(700,14pt,$color2);
+  padding-top: 0.44cm;
+  padding-bottom: 2pt;
+  border-bottom: 0.5pt solid $color2;
+  margin: 0;
+}
+h3 {
+  @include fontCalibri(700,11pt,$color2);
+  // border-bottom: 0.3pt solid $color2;
+  padding-top: 2pt;
+  padding-bottom: 2pt;
+  margin: 0;
+  // width: 50%;
+  text-align: center;
+  display: inline-block;
+}
+th {
+  border-bottom: 0.3pt solid $color2;
+}
+td {
+  width: 50%;
+}
+span {
+  font-weight: 700;
+  em {
+    padding-right: 9pt;
+  }
+}
+ul {
+  display: inline-block;
+  margin: 0;
+}
+p, li {
+  @include fontCalibri(400,9pt,$color6p);
+  margin: 0;
+  padding: 0;
+}
+img {
+  padding-left: 2.5cm;
+}
+.halfDiv {
+  width: 50%;
+  display: inline-block;
+}
+.skillsOverall {
+  p {
+    text-align: center;
+  }
+}
+.attributeSapn {
+  @include fontCalibri(700,11pt,$color2A);
+}
+
+.div2, .div3 {
+  p {
+    display: inline-block;
+    padding-right: 9pt;
+  }
+}
+.experience {
+  ul {
+    .leftLi {
+      list-style: none;
+      text-indent: -1cm;
+      p:nth-child(2n+7) {
+        // text-indent: -2.7cm;
+        padding-left: 2.7cm;
+      }
+    }
+  }
+  tr {
+    td {
+      vertical-align: top;
+    }
+  }
+}
+.noBullet {
+  list-style: none;
+}
+.aldecLeft {
+  color: $color2A;
+  &:nth-child(n+2) {
+    padding-left: 2.7cm;
+  }
+}
+.aldec {
+  color: $color2A;
+}
+.eduPad {
+  padding-left: 3cm;
+}
+.eduTop {
+  padding-top: 0.11cm;
+}
+.languages {
+  p {
+    text-align: center;
+    span {
+      @include padHor(3pt,0.67cm);
+    }
+  }
+}
+.workshop {
+  p:nth-child(odd) {
+    padding-left: 1.4cm;
+  }
+  p:nth-child(even) {
+    span {
+      padding-left: 0.3cm;
+    }
+  }
+}
+
+.declaration {
+  background-color: $color4;
+  margin-top: 0.44cm;
+  p {
+    text-align: center;
+    color: $color3;
+  }
+}
+#menuFixLeft {
+    position: fixed;
+    left: 0;
+    top: 50%;
+    width: 8rem;
+    margin: -2.5rem 0 0 -1rem;
+    z-index: 999;
+    background: $color8A;
+    // color: white;
+    @include fontCalibri(400,1rem);
+    // font-weight: bold;
+    // font-size: large;
+    text-align: center;
+    border: solid $color8B;
+    // border-right: none;
+    padding: 0.5rem 0rem;
+    // box-shadow: 0 1px 3px black;
+    border-radius: 0.5rem 2.5rem 2.5rem 0.5rem;
+    list-style: none;
+  }
+  #menuFixLeft li { margin: 0 }
+  #menuFixLeft button {
+    color: $color3;
+    background-color: $color2C;
+    border-radius: 25%;
+   }
+
+  /* Make menu absolute, not fixed, on IE 5 & 6 */
+  #menuFixLeft { position: absolute }
+  *>#menuFixLeft { position: fixed }

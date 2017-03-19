@@ -36,6 +36,12 @@ $defined-bs-type: border-box !default;
   font-weight: 400;
   font-size: $size;
 }
+@mixin fontCalibri ($fweight: 400,$fsize: 9pt,$fcolor: inherit) {
+  font-family: 'Calibri', sans-serif;
+  font-weight: $fweight;
+  font-size: $fsize;
+  color: $fcolor;
+}
 @mixin padVert($top: inherit, $bottom: inherit) {
   padding-top: $top;
   padding-bottom: $bottom;
