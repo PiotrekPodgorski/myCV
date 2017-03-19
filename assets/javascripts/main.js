@@ -68,3 +68,6 @@ $(document).ready(function(){
 function open4print(){
   window.open("../pl/cv4printPL.html","_blank", "width=360,height=480,left=100,top=100,titlebar=no,status=no,toolbar=no,menubar=no");
 }
+function open4printEN(){
+  window.open("cv4printEN.html","_blank", "width=360,height=480,left=100,top=100,titlebar=no,status=no,toolbar=no,menubar=no");
+}
